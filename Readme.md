@@ -5,8 +5,10 @@ The platform allows users to browse, book, and manage rental vehicles such as bi
 
 It includes secure authentication, booking management, notifications, file uploads, password reset functionality, and responsive UI design.
 
-✨ Features
+✨ Features  
+  
 👤 User Features  
+   
 User Registration & Login  
 Secure Password Reset via Email  
 Browse Available Vehicles  
@@ -16,20 +18,26 @@ View Booking History
 Receive Notifications  
 Responsive User Dashboard  
 Real-Time Booking Status  
+  
 🛠️ Admin Features  
+  
 Manage Users  
 Add/Edit/Delete Vehicles  
 Approve or Reject Bookings  
 Manage Notifications  
 Track Rental Activity  
 Dashboard Analytics  
+  
 🧰 Technologies Used  
+  
 Frontend    
 HTML5  
 CSS3  
 JavaScript  
 Responsive Design  
+  
 Backend  
+  
 PHP  
 MySQL  
 Libraries & Tools  
