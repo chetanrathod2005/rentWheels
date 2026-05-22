@@ -1,0 +1,136 @@
+:root {
+    --primary: #4361ee;
+    --secondary: #3f37c9;
+    --success: #4cc9f0;
+    --text-dark: #2b2d42;
+    --text-light: #8d99ae;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 20px;
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin: 40px 0 20px;
+    padding-left: 10px;
+    border-left: 4px solid var(--primary);
+}
+
+/* Grids */
+.stats-grid, .action-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* General Card Styling */
+.card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Progress Section Specifics */
+.glass {
+    color: white;
+}
+.glass.blue { background: linear-gradient(135deg, #4361ee, #4895ef); }
+.glass.green { background: linear-gradient(135deg, #2ec4b6, #cbf3f0); color: #004d40; }
+
+.count {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.icon-bg {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    font-size: 5rem;
+    opacity: 0.2;
+}
+
+/* Buttons and Links */
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Action Cards Styling */
+.action-card {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    background: #eef2ff;
+    padding: 15px;
+    border-radius: 12px;
+    margin-right: 20px;
+}
+
+.action-card .info {
+    flex: 1;
+}
+
+.action-card h3 {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.action-card a {
+    width: 100%;
+    margin-top: 15px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stats-grid, .action-grid {
+        grid-template-columns: 1fr;
+    }
+}

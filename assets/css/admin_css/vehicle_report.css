@@ -1,0 +1,95 @@
+h2 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Container */
+.serach_date {
+    width: 85%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Form layout */
+.serach_date form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Labels */
+.serach_date label {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Inputs */
+.serach_date input[type="date"] {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.serach_date input[type="date"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52,152,219,0.4);
+}
+
+/* Button */
+.serach_date button {
+    padding: 9px 18px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.serach_date button:hover {
+    background-color: #2980b9;
+}
+.table_container {
+    width: 100%;
+    overflow-x: auto;   /* Horizontal scroll on small screens */
+}
+/* Table container */
+.search_table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+/* Header */
+.search_table th {
+    background-color: #587ea4;
+    color: #ffffff;
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Table cells */
+.search_table td {
+    padding: 10px;
+    text-align: center;
+    color: #333;
+}
+.revenue_msg {
+    margin-left: 40px;
+    margin-bottom: 20px;
+}

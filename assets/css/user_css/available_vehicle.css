@@ -1,0 +1,307 @@
+/* Container for your cards (Apply this to the parent div) */
+.two_wheeler {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    align-items: stretch; /* Forces cards in same row to equal height */
+}
+
+.bike-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%; /* Important for alignment */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.bike-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Image Slider Section */
+.image-slider-container {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background: #eee;
+}
+
+.image-slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.image-slider img.active {
+    opacity: 1;
+}
+
+/* Slider Dots */
+.slider-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 5;
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background: #fff;
+    width: 18px;
+    border-radius: 10px;
+}
+
+/* Details Section - The Layout Engine */
+.bike-details {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Pushes the button down if content is short */
+}
+
+/* Corrected Badge Style */
+.brand-badge {
+    align-self: flex-start; /* Prevents badge from stretching full width */
+    background:#4a90e2;
+    color: #f1f2f6;
+    padding: 5px 14px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.bike-details h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.1rem;
+    color: #2f3542;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.specs-grid p {
+    font-size: 0.85rem;
+    color: #747d8c;
+    margin: 0;
+}
+
+.specs-grid strong {
+    color:  #2f3542;
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.price {
+    font-size: 1rem;
+    font-weight: 800;
+    color:  #2f3542;
+    margin-bottom: 10px;
+}
+
+.price span {
+    font-size: 0.85rem;
+    color: #747d8c;
+    font-weight: 400;
+}
+
+/* Handled dynamic description */
+.about {
+    font-size: 0.9rem;
+    color:#747d8c;
+    line-height: 1.5;
+    margin-bottom: 25px;
+   
+}
+
+/* Fixed Bottom Button */
+.bike-btn {
+    margin-top: auto; /* Forces the button to sit at the bottom */
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    text-align: center;
+}
+
+.bike-btn:hover {
+    transform: scale(1.03);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .bike-card {
+        max-width: 100%;
+    }
+}
+/* style for ride pop up button */
+#book_model {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* backdrop-filter: blur(5px); */
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+    overflow-y: auto;
+    /* 👈 move to top */
+}
+
+#book_model {
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+#book_model::-webkit-scrollbar {
+    display: none;
+}
+
+.booking_details::-webkit-scrollbar {
+    display: none;
+}
+
+.confirm_book {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    animation: slideDown 0.3s ease;
+}
+
+.confirm_book form {
+    display: flex;
+    flex-direction: column;
+}
+
+.confirm_book label {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.confirm_book input {
+    margin-top: 6px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.confirm_book span {
+    display: block;
+    text-align: left;
+    font-size: 13px;
+    color: #777;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.confirm_book input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Readonly fields style */
+.confirm_book input[readonly] {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+/* Buttons */
+.confirm_book button {
+    margin-top: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Confirm button */
+.confirm_book button[type="submit"] {
+    background: #4CAF50;
+    color: #fff;
+}
+
+.confirm_book button[type="submit"]:hover {
+    background: #43a047;
+}
+
+/* Cancel button */
+.confirm_book button[type="button"] {
+    background: #f44336;
+    color: white;
+
+}
+
+.confirm_book button[type="button"]:hover {
+    background: #d32f2f;
+
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+    #book_model {
+        align-items: center;
+        padding-top: 0;
+    }
+    .confirm_book form h3 {
+     margin-top: 50px;
+    }
+}

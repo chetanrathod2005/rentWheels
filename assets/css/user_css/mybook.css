@@ -1,0 +1,262 @@
+        .table_container {
+            width: 100%;
+            overflow-x: auto;
+            /* Horizontal scroll on small screens */
+        }
+
+        table {
+            width: fit-content;
+            margin-left: 30px;
+            margin-top: 20px;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Header */
+        table th {
+            background: linear-gradient(180deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-size: 15px;
+        }
+
+        /* Rows */
+        table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #invoice_modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 2001;
+            display: none;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .invoice_content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            scrollbar-width: none;
+            animation: slideDown 0.3s ease;
+        }
+
+        .print-btn {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            border-radius: 10px;
+
+        }
+
+        .print-btn button {
+            border-radius: 10px;
+            padding: 7px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .print-btn button:hover {
+            transform: scale(1.05);
+        }
+
+        .print_btn {
+            background-color: #4a90e2;
+
+        }
+
+        .print_cancel_btn {
+
+            background-color: #9E9E9E;
+
+        }
+
+        .main_print_btn {
+            margin-top: 10px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 10px;
+            margin-left: 45%;
+            background-color: #4a90e2;
+            border: none;
+            color: whitesmoke;
+        }
+
+        .main_print_btn:hover {
+
+            transform: scale(1.05);
+        }
+
+        .print_head {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .invoice-box {
+            width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .header img {
+            width: 80px;
+        }
+
+        .invoce_table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        .invoice_table th,
+        .invoce_table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .total {
+
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .print-btn {
+            text-align: center;
+            margin: 20px;
+        }
+
+        /* progress status */
+        .progress_ongoing {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .progress_completed {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .progress_pending {
+            background-color: #cce5ff;
+            color: #004085;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .progress_rejected {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .progress_unknown,.progress_expired {
+            background-color: #e2e3e5;
+            color: #6c757d;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+
+        }
+
+        /* not booking part */
+        .no-booking-message {
+            width: 100%;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .no-booking-message p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .available-bike a,
+        .available-car a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            padding: 14px 22px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: 0.3s ease;
+            color: white;
+        }
+
+        .available-bike a {
+            background: linear-gradient(135deg, #ff7b00, #ff5500);
+        }
+
+        .available-car a {
+            background: linear-gradient(135deg, #0077ff, #004cff);
+        }
+
+        .available-bike a:hover,
+        .available-car a:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .available-bike i,
+        .available-car i {
+            font-size: 22px;
+        }

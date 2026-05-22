@@ -1,0 +1,351 @@
+    h2 {
+        text-align: center;
+    }
+
+    .add_brand {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .add_brand h3 {
+        text-align: center;
+        color: #2563eb;
+    }
+
+    /* Row Layout */
+    .add_brand form {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        /* responsive */
+    }
+
+    /* Each field container */
+    .form_group {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 180px;
+    }
+
+    .file-upload {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .upload-btn {
+        padding: 7px;
+        background: #3559a7;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    .upload-btn:hover {
+        background: #1d4ed8;
+    }
+
+    #file-name {
+        color: #555;
+        font-size: 14px;
+    }
+
+    /* Inputs */
+    .form_group input {
+        padding: 8px 10px;
+        border-radius: 6px;
+        border: 1px solid #cbd5f5;
+        outline: none;
+        transition: 0.2s;
+    }
+
+    .form_group input:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 4px rgba(37, 99, 235, 0.3);
+    }
+
+    /* Button */
+    .add_brand button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        background: #1e40af;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        height: 38px;
+        align-self: flex-end;
+    }
+
+    .add_brand button:hover {
+        background: #2563eb;
+    }
+
+    .brand_details {
+        max-width: 1000px;
+        margin: 40px auto;
+    }
+
+    /* Title */
+    .brand_details h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #1e293b;
+    }
+
+    /* Table Container */
+    .brand_table {
+        background: #ffffff;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        overflow-x: auto;
+    }
+
+    /* Table */
+    .brand_table table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    /* Header */
+    .brand_table th {
+        background: #4b6397;
+        color: white;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* Rows */
+    .brand_table td {
+        padding: 7px;
+        border-bottom: 1px solid #e2e8f0;
+        color: #334155;
+    }
+    
+    /* Image */
+    .brand_table img {
+        width: 100px;
+        height: 50px;
+        object-fit: contain;
+        border-radius: 6px;
+        background: #f1f5f9;
+        padding: 5px;
+    }
+
+    /* Buttons */
+    .brand_table button {
+        padding: 6px 12px;
+        border: none;
+        border-radius: 6px;
+        font-size: 13px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    /* Update Button */
+    .update_btn {
+        background: #10b981;
+        color: white;
+    }
+
+    /* Delete Button */
+    .delete_btn {
+        background: #ef4444;
+        color: white;
+    }
+
+
+    /* Heading */
+    .update_modal h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #1e293b;
+        font-size: 22px;
+    }
+
+    /* Labels */
+    .update_modal label {
+        display: block;
+        margin-top: 12px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #475569;
+    }
+
+    /* Inputs */
+    .update_modal input[type="text"],
+    .update_modal input[type="file"] {
+        width: 100%;
+        margin-top: 6px;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #cbd5f5;
+        outline: none;
+        transition: 0.25s;
+        font-size: 14px;
+    }
+
+    /* Focus effect */
+    .update_modal input:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 6px rgba(37, 99, 235, 0.25);
+    }
+
+    /* Logo preview section */
+    .update_modal p {
+        margin-top: 15px;
+        font-size: 13px;
+        color: #64748b;
+        text-align: center;
+    }
+
+    /* Image */
+    .update_modal img {
+        display: block;
+        margin: 10px auto;
+        width: 120px;
+        height: 70px;
+        object-fit: contain;
+        background: #f8fafc;
+        padding: 6px;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+    }
+
+    .btns button {
+        margin-top: 10px;
+        padding: 10px;
+        border: whitesmoke;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btns button:hover {
+        transform: scale(1.05);
+    }
+
+    #update_brand {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 999;
+        display: none;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .update_details {
+        margin-top: 50px;
+        background: #fff;
+        border-radius: 20px;
+        /* remove rounded corners */
+        padding: 30px;
+        overflow-y: auto;
+        animation: slideDown 0.3s ease;
+        overflow-y: auto;
+        /* scrolling enabled */
+        scrollbar-width: none;
+    }
+
+    .session_msg,
+    .add_msg {
+        text-align: center;
+        color: #059669;
+
+    }
+
+    /* delete modal */
+
+    #delete_model {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: none;
+        justify-content: center;
+        align-items: flex-start;
+
+
+    }
+
+    .delete_popup {
+        animation: slideDown 0.3s ease;
+        background-color: white;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .dlt_btn {
+        margin-top: 10px;
+    }
+
+    .delete_button {
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+        background-color: #D32F2F;
+        cursor: pointer;
+        transition: 0.3s;
+        border: whitesmoke;
+    }
+
+    .cancel_button {
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+        background-color: #9E9E9E;
+        cursor: pointer;
+        transition: 0.3s;
+        border: whitesmoke;
+    }
+
+    .delete_button:hover,
+    .cancel_button:hover {
+        transform: scale(1.05);
+    }
+
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    /* ✨ Animation */
+    @keyframes popupFade {
+        from {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+     @media(max-width:768px) {
+        .delete_popup {
+            margin-top: 50px;
+            width: 70%;
+        }
+    }

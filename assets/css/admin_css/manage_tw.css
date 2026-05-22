@@ -1,0 +1,352 @@
+    .table_container {
+        overflow-x: auto;
+        margin: 0 30px;
+    }
+
+    table {
+        width: 95%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-family: Arial, sans-serif;
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    /* Header */
+    table th {
+        background: linear-gradient(180deg, #1e3c72, #2a5298);
+        color: white;
+        padding: 12px;
+        text-align: left;
+        font-size: 15px;
+    }
+
+    /* Rows */
+    table td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        font-size: 14px;
+    }
+
+    /* Buttons */
+    button {
+        padding: 6px 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 13px;
+    }
+
+    /* Update button */
+    .update-btn {
+        background-color: #2196F3;
+        color: white;
+    }
+
+    /* Delete button */
+    .delete-btn {
+        background-color: #f44336;
+        color: white;
+    }
+
+    .view-btn {
+        background-color: #28a745;
+        color: white;
+    }
+
+    /* Button hover */
+    button:hover {
+        opacity: 0.8;
+    }
+    /* update model css for update details  */
+    /* 🔲 Background Blur Overlay */
+    #update_model {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(5px);
+        z-index: 999;
+        display: none;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+
+    .tw_details {
+        margin-top: 50px;
+        margin-left: 30px;
+        background: #fff;
+        width: 60%;
+        /* full height */
+        height: 80vh;
+        border-radius: 20px;
+        /* remove rounded corners */
+        padding: 30px;
+        overflow-y: auto;
+        animation: slideDown 0.3s ease;
+        overflow-y: auto;
+        /* scrolling enabled */
+        scrollbar-width: none;
+
+    }
+
+    .tw_details::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tw_details h1 {
+        margin-bottom: 30px;
+    }
+
+    /* 🧾 Form Layout */
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    /* Full width fields */
+    .full-width {
+        grid-column: span 2;
+    }
+
+    /* Labels */
+    label {
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    /* Inputs */
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: 0.2s;
+    }
+
+    /* Focus effect */
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #4a90e2;
+        box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+    }
+
+    /* File input spacing */
+    .file-group input {
+        margin-top: 8px;
+    }
+
+    /* Fuel section */
+    .fuel-section {
+        grid-column: span 2;
+    }
+
+    .fuel-options {
+        display: flex;
+        gap: 15px;
+        margin-top: 5px;
+    }
+
+    .update_btn {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #28a745;
+        color: white;
+        cursor: pointer;
+        margin-left: 50%;
+    }
+
+    .cancel_btn {
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+        background-color: #f44336;
+        cursor: pointer;
+    }
+
+    .update_btn:hover,
+    .cancel_btn:hover {
+        transform: scale(1.1);
+    }
+    .button-group {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;  
+    }
+    /* View Model for view vehicle details */
+    #view_model {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        z-index: 999;
+        display: none;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 30px;
+    }
+
+    .view_details {
+        margin-top: 50px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        width: 60%;
+        max-height: 80vh;
+        overflow-y: auto;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        scrollbar-width: none;
+        animation: slideDown 0.3s ease;
+    }
+
+    .view_details::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari */
+    }
+
+    /* Table Styling */
+    #view_content table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+    }
+
+    #view_content th {
+        text-align: left;
+        background: #f4f4f4;
+        padding: 12px;
+        width: 30%;
+        color: #333;
+    }
+
+    #view_content td {
+        padding: 12px;
+        /* border-bottom: 1px solid #ddd; */
+    }
+    #view_content img {
+        width: 120px;
+        border-radius: 8px;
+        margin-right: 10px;
+    }
+
+    /* Delete Model CSS */
+    #delete_model {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: none;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .delete_popup {
+        animation: slideDown 0.3s ease;
+        background-color: white;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .dlt_btn {
+        margin-top: 10px;
+    }
+
+    .delete_button {
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+        background-color: #D32F2F;
+        cursor: pointer;
+    }
+
+    .cancel_button {
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+        background-color: #9E9E9E;
+        cursor: pointer;
+    }
+    .session_msg {
+        margin-top: 10px;
+        padding: 10px;
+        color: darkgreen;
+        font-weight: 600;
+        background: #D4EDDA;
+        text-align: center;
+        border-radius: 12px;
+    }
+
+    /* ✨ Slide animation */
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    /* ✨ Animation */
+    @keyframes popupFade {
+        from {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @media(max-width:768px) {
+        .view_details {
+
+            width: 90%;
+        }
+    }
+    @media (max-width: 768px) {
+        .tw_details {
+            width: 95%;
+            height: 90vh;
+            border-radius: 10px;
+            padding: 20px;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+
+        #model {
+            align-items: flex-start;
+            /* better for mobile */
+        }
+        #view_model {
+            margin: 0;
+        }
+        #update_model {
+            z-index: 2000;
+        }
+    }
+    @media(max-width:768px) {
+        .delete_popup {
+            margin-top: 50px;
+            width: 70%;
+        }
+    }
