@@ -26,7 +26,7 @@
                 <input type="email" name="email" id="email" placeholder="Enter Email" required><br>
                 <input type="password" name="password" id="password" placeholder="Password" required><br>
                 <button type="submit" name="login" class="submit-btn">Login</button>
-                <a href="user/forget_password/send_reset_link.php">Forget Password?</a>
+                <a href="user/forget_password/send_reset_link.php">Forgot Password?</a>
             </form>
            </div>
 
